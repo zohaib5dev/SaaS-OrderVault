@@ -53,7 +53,7 @@
     <!-- Analytics Content -->
     <div v-else-if="analytics" class="space-y-6">
       <!-- Key Metrics Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4">
         <div :class="[
           'rounded-2xl shadow-lg p-5 border-l-4 border-blue-500',
           isDarkMode ? 'bg-gray-800' : 'bg-white'

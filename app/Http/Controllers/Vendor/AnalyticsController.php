@@ -103,11 +103,7 @@ class AnalyticsController extends Controller
             ? round((($averageOrderValue - $previousAOV) / $previousAOV) * 100, 1)
             : 0;
 
-        // Conversion rate (would need visitor data from analytics)
-        // For now, we'll use mock data or calculate from available data
-        $conversionRate = 2.4; // This should be calculated from actual visitor data
-        $conversionGrowth = 0.5; // This should be calculated from actual visitor data
-
+       
         return [
             'total_revenue' => $totalRevenue,
             'revenue_growth' => $revenueGrowth,
@@ -115,9 +111,7 @@ class AnalyticsController extends Controller
             'orders_growth' => $ordersGrowth,
             'average_order_value' => $averageOrderValue,
             'aov_growth' => $aovGrowth,
-            'conversion_rate' => $conversionRate,
-            'conversion_growth' => $conversionGrowth
-        ];
+         ];
     }
 
     /**

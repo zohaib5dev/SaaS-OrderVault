@@ -152,10 +152,10 @@ class DashboardController extends Controller
 
             $total = Order::whereDate('created_at', $day)
                 ->where('payment_status', 'paid')
-                ->where('vendor_id', 0)
+                ->where('vendor_id', Auth::user()->vendor->id)
                 ->sum('total_amount');
 
-            $count = Order::whereDate('created_at', $day)->where('vendor_id', 0)->count();
+            $count = Order::whereDate('created_at', $day)->where('vendor_id', Auth::user()->vendor->id)->count();
 
             $data[] = [
                 'date' => $day,

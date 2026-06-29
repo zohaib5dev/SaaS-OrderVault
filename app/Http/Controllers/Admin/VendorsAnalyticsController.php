@@ -44,12 +44,10 @@ class VendorsAnalyticsController extends Controller
             'average_order_value' => $currentMetrics['orders'] > 0 
                 ? round($currentMetrics['revenue'] / $currentMetrics['orders'], 2) 
                 : 0,
-            'conversion_rate' => $this->getConversionRate($startDate, $vendorId),
-            'revenue_growth' => $this->calculateGrowth($currentMetrics['revenue'], $previousMetrics['revenue']),
+             'revenue_growth' => $this->calculateGrowth($currentMetrics['revenue'], $previousMetrics['revenue']),
             'orders_growth' => $this->calculateGrowth($currentMetrics['orders'], $previousMetrics['orders']),
             'vendors_growth' => $this->calculateVendorGrowth($startDate, $vendorId),
-            'conversion_growth' => $this->calculateConversionGrowth($startDate, $vendorId),
-        ];
+          ];
         
         // Revenue data for chart
         $revenueData = $this->getRevenueData($days, $vendorId);
@@ -105,19 +103,7 @@ class VendorsAnalyticsController extends Controller
             ->count();
     }
     
-    private function getConversionRate($startDate, $vendorId = null)
-    {
-        $totalVisitors = $this->getTotalVisitors($startDate, $vendorId);
-        $totalOrders = Order::where('created_at', '>=', $startDate)
-            ->when($vendorId, function($query) use ($vendorId) {
-                return $query->where('vendor_id', $vendorId);
-            })
-            ->count();
-            
-        return $totalVisitors > 0 
-            ? round(($totalOrders / $totalVisitors) * 100, 2) 
-            : 0;
-    }
+   
     
     private function getTotalVisitors($startDate, $vendorId = null)
     {
@@ -142,15 +128,7 @@ class VendorsAnalyticsController extends Controller
         return $this->calculateGrowth($currentVendors, $previousVendors);
     }
     
-    private function calculateConversionGrowth($startDate, $vendorId = null)
-    {
-        $previousStartDate = Carbon::now()->subDays($startDate->diffInDays(Carbon::now()) * 2);
-        
-        $currentRate = $this->getConversionRate($startDate, $vendorId);
-        $previousRate = $this->getConversionRate($previousStartDate, $vendorId);
-        
-        return $this->calculateGrowth($currentRate, $previousRate);
-    }
+  
     
     private function getRevenueData($days, $vendorId = null)
     {

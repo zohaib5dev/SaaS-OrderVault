@@ -1,59 +1,354 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Order Management System (SaaS)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern multi-tenant **Order Management System (OMS)** built with **Laravel 12**, **Vue 3**, **Tailwind CSS**, **Pinia**, and **Stripe**. The platform enables businesses to manage products, orders, invoices, customers, subscriptions, and payments from a single dashboard.
 
-## About Laravel
+Designed for agencies, distributors, wholesalers, manufacturers, and service providers who need a complete order lifecycle management solution.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🏢 Multi-Tenant SaaS Platform
+- Admin and Vendor dashboards
+- Vendor subscription management
+- Multi-tenant architecture
+- Vendor approval workflow
+- Vendor-specific branding 
+- Stripe Connect integration
+- Subscription billing
+- Free trial support
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📊 Admin Dashboard
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Platform analytics
+- Revenue reports
+- Vendor analytics
+- Subscription analytics
+- Order statistics
+- Customer growth
+- Platform settings
+- Vendor management
+- Subscription management
+- Stripe payment monitoring
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 👨‍💼 Vendor Dashboard
 
-### Premium Partners
+Each vendor gets an isolated workspace with:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Dashboard overview
+- Product management
+- Category management
+- Customer management
+- Order management
+- Invoice generation
+- Analytics
+- Subscription management
+- Stripe Connect onboarding
+- Business settings
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📦 Product Management
 
-## Code of Conduct
+- Create unlimited products
+- Optional product categories
+- Product images
+- SKU support
+- Product pricing
+- Cost price
+- Sale price
+- Product descriptions
+- Product search
+- Product filtering
+- Product status
+- Vendor-owned products
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🗂 Category Management
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Categories are optional.
 
-## License
+Features include:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Create categories
+- Edit categories
+- Delete categories
+- Assign products
+- Product filtering
+- Category search
+
+---
+
+## 📋 Order Management
+
+The application focuses on creating orders with **minimal mouse clicks**.
+
+### Smart Order Creation
+
+- Fast tab-based interface
+- Keyboard-friendly workflow
+- Quick customer selection
+- Product search
+- Product autocomplete
+- Quantity adjustment
+- Discounts
+- Taxes
+- Shipping
+- Notes
+- Live calculations
+- Draft orders
+- Save and continue later
+
+### Order Features
+
+- Create orders
+- Edit orders
+- Duplicate orders
+- Cancel orders
+- Order history
+- Order timeline
+- Payment tracking
+- Invoice generation
+- Printable invoices
+- PDF invoices 
+
+---
+
+## 🧾 Invoice Management
+
+Automatically generate professional invoices.
+
+Features include:
+
+- Invoice numbering
+- PDF invoices
+- Company branding
+- Customer details
+- Tax support
+- Discounts
+- Payment history
+- Invoice status
+- Download invoices
+- Print invoices 
+
+---
+
+## 👥 Customer Portal
+
+Customers receive their own login panel.
+
+Customers can:
+
+- View their orders
+- View invoices
+- Download invoices
+- Track order status
+- View payment history
+- Pay invoices online
+- Update profile
+- Manage billing information
+
+---
+
+## 💳 Stripe Payments
+
+Integrated with Stripe for secure online payments.
+
+Features include:
+
+- Stripe Checkout
+- Invoice payments
+- Secure card payments
+- Payment confirmation
+- Payment history
+- Refund support
+- Webhook integration
+
+---
+
+## 💼 Stripe Connect
+
+Each vendor connects their own Stripe account.
+
+Benefits include:
+
+- Vendor onboarding
+- Express Connect accounts
+- Direct customer payments
+- Automatic payouts
+- Platform commission support
+- Payment verification
+- Connected account management
+
+Customers pay vendors directly while the platform can collect application fees if configured.
+
+---
+
+## 💳 Vendor Subscriptions
+
+Recurring subscription plans for vendors.
+
+Features:
+
+- Monthly plans
+- Yearly plans
+- Free trials
+- Subscription upgrades
+- Downgrades
+- Renewals
+- Subscription cancellation
+- Billing history
+- Automatic recurring billing
+- Stripe Billing integration
+
+---
+
+## 📈 Analytics
+
+### Admin Analytics
+
+- Platform revenue
+- Vendor revenue
+- Subscription revenue
+- Total orders
+- Active vendors
+- New customers
+- Monthly growth
+- Payment reports
+
+### Vendor Analytics
+
+- Sales overview
+- Revenue charts
+- Monthly orders
+- Customer growth
+- Product performance
+- Outstanding invoices
+- Payment reports
+- Best-selling products
+
+---
+
+## 👥 Customer Management
+
+- Customer profiles
+- Billing information
+- Contact details
+- Customer search
+- Order history
+- Invoice history
+- Payment history
+- Customer notes
+
+---
+
+## ⚙ Settings
+
+### Platform Settings
+
+- General settings
+- Company information
+- Branding
+- Email settings
+- Currency
+- Tax configuration
+- Stripe configuration
+- Subscription settings
+
+### Vendor Settings
+
+- Business profile
+- Company logo
+- Business address
+- Invoice branding
+- Stripe Connect
+- Notification preferences
+
+---
+
+## 🔐 Security
+
+- Authentication
+- Authorization 
+- Vendor isolation
+- Customer authentication
+- API protection
+- Secure Stripe integration
+- CSRF protection
+- Validation
+- Activity logging
+
+---
+
+## 🎨 User Experience
+
+Built with productivity in mind.
+
+Highlights:
+
+- Responsive interface
+- Modern UI
+- Dark mode
+- Mobile friendly
+- Fast navigation
+- Minimal mouse clicks
+- Keyboard shortcuts
+- Live searching
+- Real-time calculations
+- Instant feedback
+
+---
+
+## 🛠 Technology Stack
+
+- Laravel 12
+- Vue 3
+- Pinia
+- Vue Router
+- Tailwind CSS
+- Vite
+- MySQL / PostgreSQL
+- Stripe
+- Stripe Connect
+- Stripe Billing
+- REST API
+
+---
+
+## Perfect For
+
+- Wholesalers
+- Distributors
+- Manufacturers
+- Agencies
+- B2B businesses
+- Retail businesses
+- Service providers
+- SaaS startups
+- Marketplace platforms
+- Multi-vendor businesses
+
+---
+
+## Highlights
+
+- ✅ Multi-tenant SaaS
+- ✅ Vendor subscriptions
+- ✅ Stripe Connect
+- ✅ Customer payment portal
+- ✅ Professional invoices
+- ✅ Fast order creation
+- ✅ Product management
+- ✅ Customer management
+- ✅ Advanced analytics
+- ✅ Responsive dashboard
+- ✅ Modern UI
+- ✅ Secure payment processing
+- ✅ Subscription billing
+- ✅ Vendor onboarding
+- ✅ Complete order lifecycle management
